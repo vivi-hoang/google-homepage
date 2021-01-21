@@ -1,0 +1,48 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(87, 85, 85);
+    font-family: "PT Sans", sans-serif;
+}
+
+#navbar {
+    display: grid; /* Allows for use of CSS grid properties */
+    grid-template-columns: repeat(2, 50px) 1fr repeat(4, 50px) ;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "about store . gmail images menu sign-in";
+}
+
+#about {
+    /* grid-area names the area, which can then be used with grid-template-areas */
+    grid-area: about;
+}
+
+#store {
+    /* grid-area names the area, which can then be used with grid-template-areas */
+    grid-area: store;
+}
+
+#gmail {
+    /* grid-area names the area, which can then be used with grid-template-areas */
+    grid-area: gmail;
+}
+
+#images {
+    /* grid-area names the area, which can then be used with grid-template-areas */
+    grid-area: images;
+}
+
+#menu {
+    /* grid-area names the area, which can then be used with grid-template-areas */
+    grid-area: menu;
+}
+
+#sign-in {
+    /* grid-area names the area, which can then be used with grid-template-areas */
+    grid-area: sign-in;
+}
