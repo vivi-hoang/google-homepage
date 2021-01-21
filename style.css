@@ -5,44 +5,156 @@ html {
 
 a {
     text-decoration: none; /* Remove underline from links */
-    color: rgb(87, 85, 85);
-    font-family: "PT Sans", sans-serif;
+    color: black;
+    /* font-family: "PT Sans", sans-serif;*/
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 #navbar {
     display: grid; /* Allows for use of CSS grid properties */
-    grid-template-columns: repeat(2, 50px) 1fr repeat(4, 50px) ;
+    grid-template-columns: repeat(2, 50px) 1fr repeat(4, 50px);
     grid-template-rows: 50px;
     grid-template-areas: 
     "about store . gmail images menu sign-in";
 }
 
-#about {
-    /* grid-area names the area, which can then be used with grid-template-areas */
-    grid-area: about;
+#about {    
+    grid-area: about; /* grid-area names the area, which can then be used with grid-template-areas */
+    justify-self: center; /* Aligns a grid item inside a cell along the inline (row) axis */
+    align-self: center; /* Aligns a grid item inside a cell along the block (column) axis */
 }
 
 #store {
-    /* grid-area names the area, which can then be used with grid-template-areas */
-    grid-area: store;
+    grid-area: store; 
+    justify-self: center; 
+    align-self: center; 
 }
 
-#gmail {
-    /* grid-area names the area, which can then be used with grid-template-areas */
-    grid-area: gmail;
+#gmail {    
+    grid-area: gmail; 
+    justify-self: center; 
+    align-self: center; 
 }
 
-#images {
-    /* grid-area names the area, which can then be used with grid-template-areas */
-    grid-area: images;
+#images {    
+    grid-area: images; 
+    justify-self: center; 
+    align-self: center; 
 }
 
 #menu {
-    /* grid-area names the area, which can then be used with grid-template-areas */
-    grid-area: menu;
+    grid-area: menu; 
+    justify-self: center; 
+    align-self: center; 
 }
 
 #sign-in {
-    /* grid-area names the area, which can then be used with grid-template-areas */
-    grid-area: sign-in;
+    grid-area: sign-in; 
+    justify-self: center; 
+    align-self: center; 
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 100px 175px;
+    grid-template-areas: 
+    ". logo ."
+    ". search-bar ."
+    ". flexbox .";
+}
+
+#logo {
+    grid-area: logo;
+    justify-self: center; /* center horizontally in cell */
+    align-self: end; /* display at bottom of cell */
+}
+
+#search-bar {
+    grid-area: search-bar;
+    height: 35px;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+}
+
+#flexbox {
+    display: flexbox;
+    grid-area: flexbox;
+    justify-self: center; /* center horizontally in cell */
+    /* align-self: center; */
+}
+
+#search-btn {
+    grid-area: search-btn;
+    justify-self: center;
+    align-self: top;
+}
+
+#lucky-btn {
+    grid-area: lucky-btn;
+    justify-self: center;
+    align-self: center;
+}
+
+#footer {
+    display: grid; /* Allows for use of CSS grid properties */
+    grid-template-columns: repeat(2, 80px) 125px 1fr repeat(3, 65px);
+    grid-template-rows: 40px;
+    grid-template-areas: 
+    "advertising business how-search-works carbon-neutral privacy terms settings";
+    background-color: #f2f2f2;
+    border-top: 1px solid #dadce0;
+}
+
+#footer a {
+    font-size: 14px;
+    color: #70757A;
+}
+
+#advertising {
+    grid-area: advertising;
+    justify-self: center;
+    align-self: center;
+}
+
+#business {
+    grid-area: business;
+    justify-self: center;
+    align-self: center;
+}
+
+#how-search-works {
+    grid-area: how-search-works;
+    justify-self: center;
+    align-self: center;
+}
+
+#carbon-neutral {
+    grid-area: carbon-neutral;
+    justify-self: center;
+    align-self: center;
+}
+
+#privacy {
+    grid-area: privacy;
+    justify-self: center;
+    align-self: center;
+}
+
+#terms {
+    grid-area: terms;
+    justify-self: center;
+    align-self: center;
+}
+
+#settings {
+    grid-area: settings;
+    justify-self: center;
+    align-self: center;
 }
