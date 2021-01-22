@@ -15,12 +15,14 @@ a:hover {
     text-decoration: underline;
 }
 
+/** NAVIGATION BAR AT TOP **/
 #navbar {
     display: grid; /* Allows for use of CSS grid properties */
     grid-template-columns: repeat(2, 50px) 1fr repeat(4, 50px);
     grid-template-rows: 50px;
     grid-template-areas: 
     "about store . gmail images menu sign-in";
+    margin: 0 20px;
 }
 
 #about {    
@@ -56,9 +58,18 @@ a:hover {
 #sign-in {
     grid-area: sign-in; 
     justify-self: center; 
-    align-self: center; 
+    align-self: center;
+    background-color: #4387FD;
+    height: 30px;
+    width: 60px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px; /* centers text vertically */
+    border-radius: 2px;
 }
 
+/** SEARCH BAR SECTION **/
 #main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,41 +89,76 @@ a:hover {
 #search-bar {
     grid-area: search-bar;
     height: 35px;
-    width: 100%;
+    width: 130%;
     justify-self: center;
     align-self: center;
+    border-radius: 20px;
+    border: 1px solid rgb(218, 217, 217);
+}
+
+input:focus {
+    outline: none; /* Removes automatic border that displays when a field is active */
+}
+
+#search-bar:hover {
+    box-shadow: 1px 1px 5px rgb(218, 217, 217);
+}
+
+#search-bar:active {
+    box-shadow: 1px 1px 5px rgb(218, 217, 217);
 }
 
 #flexbox {
     display: flexbox;
     grid-area: flexbox;
     justify-self: center; /* center horizontally in cell */
-    /* align-self: center; */
 }
 
 #search-btn {
     grid-area: search-btn;
-    justify-self: center;
-    align-self: top;
+    border: none;
+    font-size: 14px;
+    background-color: #F8F9FA;
+    color: rgb(60, 64, 67);
+    padding: 10px 13px 10px 13px;
+    margin: 0 4px 0 0;
+}
+
+#search-btn:hover {
+    border: 1px solid rgb(209, 208, 208);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(218, 217, 217);
 }
 
 #lucky-btn {
     grid-area: lucky-btn;
-    justify-self: center;
-    align-self: center;
+    border: none;
+    font-size: 14px;
+    background-color: #F8F9FA;
+    color: rgb(60, 64, 67);
+    padding: 10px 13px 10px 13px;
+    margin: 0 0 0 4px;
 }
 
+#lucky-btn:hover {
+    border: 1px solid rgb(209, 208, 208);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(218, 217, 217);
+}
+
+/** FOOTER **/
 #footer {
     display: grid; /* Allows for use of CSS grid properties */
-    grid-template-columns: repeat(2, 80px) 125px 1fr repeat(3, 65px);
+    grid-template-columns: repeat(2, 100px) 125px 1fr repeat(3, 80px);
     grid-template-rows: 40px;
     grid-template-areas: 
     "advertising business how-search-works carbon-neutral privacy terms settings";
     background-color: #f2f2f2;
     border-top: 1px solid #dadce0;
+    align-self: end;
 }
 
-#footer a {
+#footer a {    
     font-size: 14px;
     color: #70757A;
 }
