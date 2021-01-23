@@ -156,6 +156,10 @@ input:focus {
     background-color: #f2f2f2;
     border-top: 1px solid #dadce0;
     align-self: end;
+    position: fixed;    /* to lock footer to bottom */
+    left: 0;            /* to lock footer to bottom */
+    bottom: 0;          /* to lock footer to bottom */
+    width:100%;         /* to lock footer to bottom */
 }
 
 #footer a {    
